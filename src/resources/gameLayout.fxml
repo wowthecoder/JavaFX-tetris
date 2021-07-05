@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Group?>
+<?import gui.GameOverPanel?>
+<?import java.net.URL?>
+
+<Pane fx:controller="gui.GuiController" xmlns:fx="http://javafx.com/fxml">
+   <GridPane fx:id="brickPanel" vgap="2" hgap="2"/>
+   <GridPane fx:id="shadowPanel" vgap="2" hgap="2"/>
+   <BorderPane styleClass="gameBoard">
+      <center>
+         <GridPane fx:id="gamePanel" vgap="2" hgap="2"/>
+      </center>
+   </BorderPane>
+   <VBox layoutX="300" layoutY="5" alignment="CENTER" styleClass="vbox">
+      <VBox alignment="CENTER">
+         <Label text = "Score: " styleClass="scoreClass" />
+         <Text text = "text"  fx:id="scoreValue" styleClass="scoreClass"/>
+         <Label text="Lines Removed: " styleClass="linesRemoved" />
+         <Text text="text" fx:id="linesCleared" styleClass="linesClass" />
+         <Label text="High Score: " styleClass="highScore" />
+         <Text text="text" fx:id="highScore" styleClass="linesClass" />
+      </VBox>
+      <VBox alignment="CENTER">
+         <Label text="Next Brick" styleClass="nextBrickLabel" />
+         <BorderPane styleClass="nextBrick" prefWidth="120" prefHeight="80" maxWidth="120">
+            <center>
+               <GridPane fx:id="nextBrick" alignment="CENTER" hgap="2" vgap="2" />
+            </center>
+         </BorderPane>
+      </VBox>
+      <VBox alignment="CENTER">
+         <Label text="Saved Brick" styleClass="nextBrickLabel" />
+         <BorderPane styleClass="nextBrick" prefWidth="120" prefHeight="80" maxWidth="120">
+            <center>
+               <GridPane fx:id="savedBrick" alignment="CENTER" hgap="2" vgap="2"/>
+            </center>
+         </BorderPane>
+      </VBox>
+      <Button text="New Game" fx:id="newGameBtn" styleClass="ipad-dark-grey" />
+      <ToggleButton text="Pause" fx:id="pauseButton" styleClass="ipad-dark-grey"/>
+   </VBox>
+   
+   <VBox layoutX="450" layoutY="15" alignment="CENTER" styleClass="vbox">
+      <VBox>
+         <Text styleClass="helpInfo" wrappingWidth="150">
+            <![CDATA[
+            Use arrow keys (←, ↑, →, ↓) or (A,W,S,D) for movement and rotating. 
+            SPACE key to instantly drop a block.
+            ]]>
+         </Text>
+         <Text styleClass="helpInfo" wrappingWidth="150">
+            <![CDATA[
+            C - save the current block and used a saved block. 
+            ]]>
+         </Text>
+         <Text styleClass="helpInfo" wrappingWidth="150">
+            <![CDATA[
+            N - start new game.
+            ]]>
+         </Text>
+         <Text styleClass="helpInfo" wrappingWidth="150">
+            <![CDATA[
+            P - pause/resume.
+            ]]>
+         </Text>
+      </VBox>
+   </VBox>
+   
+   <Group fx:id="groupNotification" layoutX="14" layoutY="203">
+       <GameOverPanel fx:id="gameOverPanel" />
+   </Group>
+   <stylesheets>
+      <URL value="@window_style.css" />
+   </stylesheets>
+</Pane>

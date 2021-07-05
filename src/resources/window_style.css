@@ -1,0 +1,98 @@
+.root {
+	-fx-background-image: url("background_image.png")
+}
+
+.vbox {
+	-fx-spacing: 12;
+}
+
+.gameBoard {
+	-fx-border-color: linear-gradient(#2A5058, #61a2b1);
+	-fx-border-width: 12px;
+	-fx-border-radius: 12px;
+}
+
+.nextBrickLabel {
+	-fx-font-family: "Let's go Digital";
+	-fx-padding: 20px 0.0 0.0 0.0;
+	-fx-font-size: 16px;
+	-fx-text-fill: yellow;
+}
+
+.nextBrick {
+	-fx-border-width: 2px;
+	-fx-border-color: whitesmoke;
+	-fx-border-radius: 15px;
+}
+
+.ipad-dark-grey {
+	-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+	linear-gradient(#020b02, #3a3a3a),
+	linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+	linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+	linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+	-fx-background-insets: 0, 1, 4, 5, 6;
+	-fx-background-radius: 9, 8, 5, 4, 3;
+	-fx-padding: 8;
+	-fx-font-family: "Let's go Digital";
+	-fx-font-size: 22px;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+	/*DropShadow(BlurType blurType, Color color, double radius, double spread, double offsetX, double offsetY)*/
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 1), 1, 0.0, 0, 1);
+}
+
+.helpInfo {
+	-fx-fill: white;
+	-fx-alignment: center-left;
+	-fx-text-alignment: left;
+	-fx-font-size: 16;
+}
+
+.scoreClass {
+	-fx-font-family: "Let's go Digital";
+	-fx-font-size: 38;
+	-fx-fill: yellow;
+	-fx-text-fill: yellow;
+}
+
+.linesRemoved {
+	-fx-font-family: "Let's go Digital";
+	-fx-font-size: 15;
+	-fx-fill: yellow;
+	-fx-text-fill: yellow;
+	-fx-padding: 25px 0 0 0;
+}
+
+.highScore {
+	-fx-font-family: "Let's go Digital";
+	-fx-font-size: 15;
+	-fx-fill: yellow;
+	-fx-text-fill: yellow;
+}
+
+.linesClass {
+	-fx-font-family: "Let's go Digital";
+	-fx-font-size: 30;
+	-fx-fill: yellow;
+	-fx-text-fill: yellow;
+}
+
+.bonusStyle {
+	-fx-font-size: 40px;
+	-fx-font-weight: bold;
+}
+
+.levelUpStyle {
+	-fx-font-family: "Let's go Digital";
+	-fx-font-size: 48;
+	-fx-text-fill: white;
+	-fx-background-color: purple;
+	-fx-border-radius: 15px;
+}
+
+.gameOverStyle {
+	-fx-font-family: "Let's go Digital";
+	-fx-font-size: 48;
+	-fx-background-color: red;
+}
